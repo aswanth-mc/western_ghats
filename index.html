@@ -6,7 +6,7 @@
   <title>Western Ghats</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-green-50 m-0">
+<body class="bg-white m-0">
   <div class="main">
 
     <!-- navbar -->
@@ -15,8 +15,8 @@
           <div class="text-xl font-bold">Western Ghats</div>
           <div class="fixed  right-4 bg-gray-100">
             <ul class="flex space-x-8 text-sm fixed  right-4  ">
-              <li><a href="#" class="hover:text-yellow-300 transition">Home</a></li>
-              <li><a href="#" class="hover:text-yellow-300 transition">Biodiversity</a></li>
+              <li><a href="#home" class="hover:text-yellow-300 transition">Home</a></li>
+              <li><a href="#bio" class="hover:text-yellow-300 transition">Biodiversity</a></li>
               <li><a href="#" class="hover:text-yellow-300 transition">Sanctuaries</a></li>
               <li><a href="#" class="hover:text-yellow-300 transition">Challenges</a></li>
             </ul>
@@ -25,8 +25,12 @@
       </nav>
 
       <!-- home section -->
-       <div class="home">
-        <img src="./assests/image/western_ghats_bannar.jpg" alt="">
+       <div id="home" class="home bg-cover bg-center bg-no-repeat h-screen flex items-center justify-center" style="background-image: url('assests/image/western_ghats_bannar.jpg')">
+        <div class="">
+          <h1 class="text-white text-4xl font-bold">The Western Ghats</h1>
+          <h3 class="text-white text-xl font-bold">Nature, Widlife & Conservation</h3>
+          <p class="text-white">“The Western Ghats whisper the stories of rain, roots, and resilience.”</p>
+        </div>
        </div>
   </div>
 </body>

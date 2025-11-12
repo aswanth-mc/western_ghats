@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Western Ghats</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="bg-white m-0">
-  <div class="main">
+
+  <main>
 
     <!-- navbar -->
-    <header class="bg-gradient-to-r from-oklch(79.2% 0.209 151.711) to-oklch(79.2% 0.209 151.711) fixed w-full top-0 z-50 shadow-lg">
-       <nav class="max-w-full py-4 px-4 flex items-center justify-between">
-         <!-- Logo -->
+    <header
+      class="bg-gradient-to-r from-oklch(79.2% 0.209 151.711) to-oklch(79.2% 0.209 151.711) fixed w-full top-0 z-50 shadow-lg">
+      <nav class="max-w-full py-4 px-4 flex items-center justify-between">
+        <!-- Logo -->
         <div class="text-xl font-bold text-white">Western Ghats</div>
-        
+
         <!-- Hamburger Menu Button (Mobile) -->
         <button id="menu-toggle" class="md:hidden text-white text-2xl focus:outline-none">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
         </button>
-        
+
         <!-- Desktop Menu -->
         <ul class="hidden md:flex space-x-8 text-sm text-white">
           <li><a href="#home" class="hover:text-yellow-300 transition duration-300">Home</a></li>
@@ -28,11 +32,11 @@
           <li><a href="#sanctuaries" class="hover:text-yellow-300 transition duration-300">Sanctuaries</a></li>
           <li><a href="#challenges" class="hover:text-yellow-300 transition duration-300">Challenges</a></li>
         </ul>
-       </nav>
-       
-       <!-- Mobile Menu -->
-       <div id="mobile-menu" class="hidden md:hidden bg-oklch(79.2% 0.209 151.711)">
-         <ul class="flex flex-col space-y-4 px-4 py-4 text-white text-sm">
+      </nav>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-oklch(79.2% 0.209 151.711)">
+        <ul class="flex flex-col space-y-4 px-4 py-4 text-white text-sm">
           <li><a href="#home" class="block hover:text-yellow-300 transition duration-300">Home</a></li>
           <li><a href="#bio" class="block hover:text-yellow-300 transition duration-300">Biodiversity</a></li>
           <li><a href="#sanctuaries" class="block hover:text-yellow-300 transition duration-300">Sanctuaries</a></li>
@@ -40,92 +44,105 @@
         </ul>
       </div>
     </header>
-    
+
 
     <!-- home section -->
-         <div id="home" class="home bg-cover bg-center bg-no-repeat h-screen flex items-center justify-center pt-20 relative" style="background-image: url('assests/image/western_ghats_bannar.jpg')">
-          <!-- Dark overlay for better text readability -->
-          <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-          
-          <div class="relative text-center px-4 max-w-4xl">
-            <h1 class="text-white text-6xl md:text-7xl font-bold mb-4 leading-tight drop-shadow-lg">The Western Ghats</h1>
-            <h3 class="text-yellow-300 text-2xl md:text-4xl font-bold mb-6  ">Nature, Wildlife & Conservation</h3>
-            <p class="text-white text-lg md:text-2xl italic mb-8 drop-shadow-md leading-relaxed">"The Western Ghats whisper the stories of rain, roots, and resilience."</p>
-            
-            <!-- Call to action button -->
-            <button class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-3 px-8 rounded-lg text-lg transition duration-300 transform hover:scale-105 shadow-lg"><a href="#about">Explore More</a>
-              
-            </button>
-          </div>
-         </div>
-    
-    
-       <div class="items-center relative text-center m-10 py-12">
-        <h1 class="font-bold text-4xl md:text-5xl mb-4">Discover the Western Ghats</h1>
-        <p class="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">Stretching along the western coast of India, the Western Ghats are a UNESCO World Heritage site known for their rich biodiversity, endemism and stunning landscapes.</p>
-       </div>
+    <div id="home" class="home bg-cover bg-center bg-no-repeat h-screen flex items-center justify-center pt-20 relative"
+      style="background-image: url('assests/image/western_ghats_bannar.jpg')">
+      <!-- Dark overlay for better text readability -->
+      <div class="absolute inset-0 bg-black bg-opacity-40"></div>
 
-      <!-- card section -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 md:px-8 lg:px-12 py-12 max-w-7xl mx-auto" id="about">
-        
-        <!-- Card 1 -->
-        <div class="rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-105 bg-white">
-          <div class="relative overflow-hidden h-64">
-            <img class="w-full h-full object-cover" src="./assests/image/wildlif_card.jpg" alt="Wildlife">
-          </div>
-          <div class="px-6 py-4">
-            <div class="font-bold text-2xl mb-2 text-gray-800">Wildlife</div>
-            <p class="text-gray-600 text-base leading-relaxed">
-              Discover the incredible biodiversity of the Western Ghats, home to rare and endangered species found nowhere else on Earth.
-            </p>
-          </div>
+      <div class="relative text-center px-4 max-w-4xl">
+        <h1 class="text-white text-6xl md:text-7xl font-bold mb-4 leading-tight drop-shadow-lg">The Western Ghats</h1>
+        <h3 class="text-yellow-300 text-2xl md:text-4xl font-bold mb-6  ">Nature, Wildlife & Conservation</h3>
+        <p class="text-white text-lg md:text-2xl italic mb-8 drop-shadow-md leading-relaxed">"The Western Ghats whisper
+          the stories of rain, roots, and resilience."</p>
+
+        <!-- Call to action button -->
+        <button
+          class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-3 px-8 rounded-lg text-lg transition duration-300 transform hover:scale-105 shadow-lg"><a
+            href="#about">Explore More</a>
+
+        </button>
+      </div>
+    </div>
+
+
+    <div class="items-center relative text-center m-10 py-12">
+      <h1 class="font-bold text-4xl md:text-5xl mb-4">Discover the Western Ghats</h1>
+      <p class="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">Stretching along the western coast
+        of India, the Western Ghats are a UNESCO World Heritage site known for their rich biodiversity, endemism and
+        stunning landscapes.</p>
+    </div>
+
+    <!-- card section -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 md:px-8 lg:px-12 py-12 max-w-7xl mx-auto"
+      id="about">
+
+      <!-- Card 1 -->
+      <div
+        class="rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-105 bg-white">
+        <div class="relative overflow-hidden h-64">
+          <img class="w-full h-full object-cover" src="./assests/image/wildlif_card.jpg" alt="Wildlife">
         </div>
-        
-        <!-- Card 2 -->
-        <div class="rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-105 bg-white">
-          <div class="relative overflow-hidden h-64">
-            <img class="w-full h-full object-cover" src="./assests/image/geography_card.jpg" alt="Geography">
-          </div>
-          <div class="px-6 py-4">
-            <div class="font-bold text-2xl mb-2 text-gray-800">Geography</div>
-            <p class="text-gray-600 text-base leading-relaxed">
-              Explore the dramatic terrain, ancient forests, and breathtaking landscapes that make the Western Ghats truly unique.
-            </p>
-          </div>
-        </div>
-        
-        <!-- Card 3 -->
-        <div class="rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-105 bg-white">
-          <div class="relative overflow-hidden h-64">
-            <img class="w-full h-full object-cover" src="./assests/image/conservaton_card.jpg" alt="Conservation">
-          </div>
-          <div class="px-6 py-4">
-            <div class="font-bold text-2xl mb-2 text-gray-800">Conservation</div>
-            <p class="text-gray-600 text-base leading-relaxed">
-              Learn about the ongoing efforts to protect and preserve this crucial ecosystem for future generations.
-            </p>
-          </div>
+        <div class="px-6 py-4">
+          <div class="font-bold text-2xl mb-2 text-gray-800">Wildlife</div>
+          <p class="text-gray-600 text-base leading-relaxed">
+            Discover the incredible biodiversity of the Western Ghats, home to rare and endangered species found nowhere
+            else on Earth.
+          </p>
         </div>
       </div>
 
-      <!-- footer section -->
-       <footer class="bg-green-900 text-green-100 text-center py-6 mt-16">
-        <p class="text-sm">&copy 2025 The Western Ghats Project | Designed by <span class="font-semibold ">Aswanth M.C</span></p>
-        <p class="text-xs mt-1 text-green-300">"Preserve nature,Project life"</p>
-       </footer>
+      <!-- Card 2 -->
+      <div
+        class="rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-105 bg-white">
+        <div class="relative overflow-hidden h-64">
+          <img class="w-full h-full object-cover" src="./assests/image/geography_card.jpg" alt="Geography">
+        </div>
+        <div class="px-6 py-4">
+          <div class="font-bold text-2xl mb-2 text-gray-800">Geography</div>
+          <p class="text-gray-600 text-base leading-relaxed">
+            Explore the dramatic terrain, ancient forests, and breathtaking landscapes that make the Western Ghats truly
+            unique.
+          </p>
+        </div>
+      </div>
 
-  </div>
+      <!-- Card 3 -->
+      <div
+        class="rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-105 bg-white">
+        <div class="relative overflow-hidden h-64">
+          <img class="w-full h-full object-cover" src="./assests/image/conservaton_card.jpg" alt="Conservation">
+        </div>
+        <div class="px-6 py-4">
+          <div class="font-bold text-2xl mb-2 text-gray-800">Conservation</div>
+          <p class="text-gray-600 text-base leading-relaxed">
+            Learn about the ongoing efforts to protect and preserve this crucial ecosystem for future generations.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer section -->
+    <footer class="bg-green-900 text-green-100 text-center py-6 mt-16">
+      <p class="text-sm">&copy 2025 The Western Ghats Project | Designed by <span class="font-semibold ">Aswanth
+          M.C</span></p>
+      <p class="text-xs mt-1 text-green-300">"Preserve nature,Project life"</p>
+    </footer>
+
+  </main>
 </body>
 
 <script>
   // Mobile menu toggle
   const menuToggle = document.getElementById('menu-toggle');
   const mobileMenu = document.getElementById('mobile-menu');
-  
+
   menuToggle.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden');
   });
-  
+
   // Close menu when a link is clicked
   const mobileLinks = mobileMenu.querySelectorAll('a');
   mobileLinks.forEach(link => {
@@ -134,4 +151,5 @@
     });
   });
 </script>
+
 </html>

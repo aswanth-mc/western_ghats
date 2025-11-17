@@ -1,138 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Geography — Western Ghats</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Optional: Tailwind custom animations -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          keyframes: {
+            slideUp: {
+              '0%': { opacity: 0, transform: 'translateY(12px)' },
+              '100%': { opacity: 1, transform: 'translateY(0)' }
+            }
+          },
+          animation: {
+            slideUp: 'slideUp 0.7s ease-out'
+          }
+        }
+      }
+    }
+  </script>
 </head>
-
 <body class="bg-gray-50 text-gray-800 antialiased">
-    <main>
-        <!-- navbar -->
-        <header class="bg-gradient-to-r from-green-700 to-green-800">
-            <nav class="max-w-full py-4 px-4 flex items-center justify-between">
-                <!-- Logo -->
-                <div class="text-xl font-bold text-white">Western Ghats</div>
 
-                <!-- Hamburger Menu Button (Mobile) -->
-                <button id="menu-toggle" class="md:hidden text-white text-2xl focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16">
-                        </path>
-                    </svg>
-                </button>
+<!-- navbar -->
+    <header class="bg-gradient-to-r from-green-700 to-green-800">
+      <nav class="max-w-full py-4 px-4 flex items-center justify-between">
+        <!-- Logo -->
+        <div class="text-xl font-bold text-white">Western Ghats</div>
 
-                <!-- Desktop Menu -->
-                <ul class="hidden md:flex space-x-8 text-sm text-white">
-                    <li><a href="./index.html" class="hover:text-yellow-300 transition duration-300">Home</a></li>
-                    <li><a href="#bio" class="hover:text-yellow-300 transition duration-300">Biodiversity</a></li>
-                    <li><a href="/sanctury_nationalPark.html"
-                            class="hover:text-yellow-300 transition duration-300">Sanctuaries</a></li>
-                    <li><a href="#challenges" class="hover:text-yellow-300 transition duration-300">Challenges</a></li>
-                </ul>
-            </nav>
+        <!-- Hamburger Menu Button (Mobile) -->
+        <button id="menu-toggle" class="md:hidden text-white text-2xl focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
 
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="hidden md:hidden bg-oklch(79.2% 0.209 151.711)">
-                <ul class="flex flex-col space-y-4 px-4 py-4 text-white text-sm">
-                    <li><a href="./index.html" class="block hover:text-yellow-300 transition duration-300">Home</a></li>
-                    <li><a href="#bio" class="block hover:text-yellow-300 transition duration-300">Biodiversity</a></li>
-                    <li><a href="/sanctury_nationalPark.html"
-                            class="block hover:text-yellow-300 transition duration-300">Sanctuaries</a></li>
-                    <li><a href="#challenges" class="block hover:text-yellow-300 transition duration-300">Challenges</a>
-                    </li>
-                </ul>
-            </div>
-        </header>
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex space-x-8 text-sm text-white">
+          <li><a href="./index.html" class="hover:text-yellow-300 transition duration-300">Home</a></li>
+          <li><a href="#bio" class="hover:text-yellow-300 transition duration-300">Biodiversity</a></li>
+          <li><a href="/sanctury_nationalPark.html" class="hover:text-yellow-300 transition duration-300">Sanctuaries</a></li>
+          <li><a href="#challenges" class="hover:text-yellow-300 transition duration-300">Challenges</a></li>
+        </ul>
+      </nav>
 
-        <!-- banner -->
-        <section class="items-center w-full bg-green-100 h-[60vh] relative">
-            <img src="./assests/image/geography_bannar.jpg" alt="" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-black/40"></div>
-            <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-4">
-                <h1 class="text-white text-4xl md:text-5xl font-bold">Geography of the Western Ghatss </h1>
-                <p class="text-white mt-4 md:text-2xl">Location, mountain ranges, climate, rivers and the important
-                    peaks that shape this biodiversity hotspot.</p>
-            </div>
-        </section>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-oklch(79.2% 0.209 151.711)">
+        <ul class="flex flex-col space-y-4 px-4 py-4 text-white text-sm">
+          <li><a href="./index.html" class="block hover:text-yellow-300 transition duration-300">Home</a></li>
+          <li><a href="#bio" class="block hover:text-yellow-300 transition duration-300">Biodiversity</a></li>
+          <li><a href="./sanctury_nationalPark.html" class="block hover:text-yellow-300 transition duration-300">Sanctuaries</a></li>
+          <li><a href="#challenges" class="block hover:text-yellow-300 transition duration-300">Challenges</a></li>
+        </ul>
+      </div>
+    </header>
 
-        <!-- overview -->
-        <section class="text-center md:text-left">
-            <h1 class=" text-2xl font-bold text-green-700 animate-slideUp">Quick Overview</h1>
-            <p class="text-gray-600 mt-3 max-w-3xl leading-relaxed">
-                The Western Ghats (Sahyadri) run parallel to India’s western coast for about <strong>1,600 km</strong>,
-                spanning six states. They form a critical climatic barrier that helps drive the monsoon and
-                sustain rich ecosystems across South India
-            </p>
-        </section>
+  <!-- BANNER -->
+  <section class="relative">
+    <img src="./assests/image/geography_bannar.jpg" alt="Western Ghats hills and forest" class="w-full h-64 md:h-[38vh] object-cover">
+    <div class="absolute inset-0 bg-black/35 flex items-center">
+      <div class="max-w-6xl mx-auto px-6">
+        <h1 class="text-3xl md:text-5xl font-extrabold text-white ">Geography of the Western Ghats</h1>
+        <p class="text-sm md:text-base text-gray-100 mt-2 max-w-2xl">Location, mountain ranges, climate, rivers and the important peaks that shape this biodiversity hotspot.</p>
+      </div>
+    </div>
+  </section>
 
-        <!-- Anchor navigation  -->
-        <section class="bg-white rounded-2xl shadow p-4 flex flex-wrap gap-3 items-center md:justify-start text-center">
-            <a href="#location"
-                class="px-4 py-2 bg-green-50 text-green-700 rounded-full text-sm hover:bg-green-100">Location &
-                Range</a>
-            <a href="#ranges" class="px-4 py-2 bg-green-50 text-green-700 rounded-full text-sm hover:bg-green-100">Major
-                Ranges</a>
-            <a href="#climate"
-                class="px-4 py-2 bg-green-50 text-green-700 rounded-full text-sm hover:bg-green-100">Climate</a>
-            <a href="#rivers"
-                class="px-4 py-2 bg-green-50 text-green-700 rounded-full text-sm hover:bg-green-100">Rivers</a>
-            <a href="#peaks"
-                class="px-4 py-2 bg-green-50 text-green-700 rounded-full text-sm hover:bg-green-100">Important Peaks</a>
-        </section>
+  <!-- PAGE CONTENT -->
+  <main class="max-w-6xl mx-auto px-6 py-12 space-y-12">
 
-        <!-- 1. Location & Range -->
-        <section id="location" class="grid md:grid-cols-2 gap-8 items-center">
-            <div class="space-y-4">
-                <h3 class="text-xl font-semibold text-green-700">Location & Range</h3>
-                <p class="text-gray-600 leading-relaxed">
-                    The Western Ghats (Sahyadri) extend ~1,600 km from the Tapti River in Gujarat to Kanyakumari
-                    in Tamil Nadu. They pass through Gujarat, Maharashtra, Goa, Karnataka, Kerala and Tamil Nadu,
-                    forming a steep escarpment facing the Arabian Sea and a gentler slope toward the Deccan Plateau.
-                </p>
+    <!-- Short intro -->
+    <section class="text-center md:text-left">
+      <h2 class="text-2xl font-bold text-green-700 animate-slideUp">Quick Overview</h2>
+      <p class="text-gray-600 mt-3 max-w-3xl leading-relaxed">
+        The Western Ghats (Sahyadri) run parallel to India’s western coast for about <strong>1,600 km</strong>,
+        spanning six states. They form a critical climatic barrier that helps drive the monsoon and
+        sustain rich ecosystems across South India.
+      </p>
+    </section>
 
-                <ul class="mt-2 text-gray-600 list-inside list-disc space-y-1">
-                    <li><strong>Length:</strong> ~1,600 km</li>
-                    <li><strong>States:</strong> Gujarat, Maharashtra, Goa, Karnataka, Kerala, Tamil Nadu</li>
-                    <li><strong>Role:</strong> Monsoon barrier and water catchment for major rivers</li>
-                </ul>
-            </div>
+    <!-- Anchor navigation (compact) -->
+    <section class="bg-white rounded-2xl shadow p-4 flex flex-wrap gap-3 justify-center md:justify-start">
+      <a href="#location" class="px-4 py-2 bg-green-50 text-green-700 rounded-full text-sm hover:bg-green-100">Location & Range</a>
+      <a href="#ranges" class="px-4 py-2 bg-green-50 text-green-700 rounded-full text-sm hover:bg-green-100">Major Ranges</a>
+      <a href="#climate" class="px-4 py-2 bg-green-50 text-green-700 rounded-full text-sm hover:bg-green-100">Climate</a>
+      <a href="#rivers" class="px-4 py-2 bg-green-50 text-green-700 rounded-full text-sm hover:bg-green-100">Rivers</a>
+      <a href="#peaks" class="px-4 py-2 bg-green-50 text-green-700 rounded-full text-sm hover:bg-green-100">Important Peaks</a>
+    </section>
 
-            <figure class="rounded-xl overflow-hidden shadow">
-                <img src="./assests/image/geo_map.png" alt="Map showing Western Ghats range"
-                    class="w-full h-56 object-cover">
-            </figure>
-        </section>
+    <!-- 1. Location & Range -->
+    <section id="location" class="grid md:grid-cols-2 gap-8 items-center">
+      <div class="space-y-4">
+        <h3 class="text-xl font-semibold text-green-700">Location & Range</h3>
+        <p class="text-gray-600 leading-relaxed">
+          The Western Ghats (Sahyadri) extend ~1,600 km from the Tapti River in Gujarat to Kanyakumari
+          in Tamil Nadu. They pass through Gujarat, Maharashtra, Goa, Karnataka, Kerala and Tamil Nadu,
+          forming a steep escarpment facing the Arabian Sea and a gentler slope toward the Deccan Plateau.
+        </p>
+
+        <ul class="mt-2 text-gray-600 list-inside list-disc space-y-1">
+          <li><strong>Length:</strong> ~1,600 km</li>
+          <li><strong>States:</strong> Gujarat, Maharashtra, Goa, Karnataka, Kerala, Tamil Nadu</li>
+          <li><strong>Role:</strong> Monsoon barrier and water catchment for major rivers</li>
+        </ul>
+      </div>
+
+      <figure class="rounded-xl overflow-hidden shadow">
+        <img src="./assests/image/map.png" alt="Map showing Western Ghats range" class="w-full h-56 object-cover">
+      </figure>
+    </section>
+
+    <!-- 2. Major Mountain Ranges -->
+    <section id="ranges" class="space-y-6">
+      <h3 class="text-xl font-semibold text-green-700">Major Mountain Ranges</h3>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- card -->
+        <article class="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition">
+          <h4 class="font-semibold">Sahyadri Range (Maharashtra)</h4>
+          <p class="text-gray-600 mt-2">Covers the northern stretch; includes hill stations like Mahabaleshwar and the Kalsubai peak.</p>
+        </article>
+
+        <article class="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition">
+          <h4 class="font-semibold">Nilgiri Hills</h4>
+          <p class="text-gray-600 mt-2">Bordering Tamil Nadu, Kerala and Karnataka — famous for Ooty and montane ecosystems.</p>
+        </article>
+
+        <article class="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition">
+          <h4 class="font-semibold">Anaimalai (Anamala)</h4>
+          <p class="text-gray-600 mt-2">Includes high peaks like Anamudi and large protected areas (Parambikulam, Anamalai).</p>
+        </article>
+
+        <article class="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition">
+          <h4 class="font-semibold">Cardamom & Agasthyamalai Hills</h4>
+          <p class="text-gray-600 mt-2">Southern ranges known for spices, medicinal plants, and unique flora/fauna (Agasthyamala).</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 3. Climate -->
+    <section id="climate" class="grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h3 class="text-xl font-semibold text-green-700">Climate</h3>
+        <p class="text-gray-600 mt-2 leading-relaxed">
+          The Western Ghats have a tropical monsoon climate. The western slopes receive heavy southwest
+          monsoon rainfall (June–September), creating wet evergreen forests. Leeward areas get less rain
+          and form drier habitats.
+        </p>
+
+        <ul class="mt-3 text-gray-600 list-disc list-inside">
+          <li><strong>High rainfall:</strong> some places exceed 5,000–7,000 mm/year.</li>
+          <li><strong>Seasons:</strong> Southwest monsoon, northeast monsoon, and dry season.</li>
+          <li><strong>Altitude effect:</strong> Higher elevations are cooler with montane shola-grassland ecosystems.</li>
+        </ul>
+      </div>
+
+      <figure class="rounded-2xl overflow-hidden shadow">
+        <img src="./assests/image/misty western ghats .jpg" alt="Misty Western Ghats during monsoon" class="w-full h-56 object-cover">
+      </figure>
+    </section>
+
+    <!-- 4. Rivers -->
+    <section id="rivers" class="space-y-6">
+      <h3 class="text-xl font-semibold text-green-700">Major Rivers</h3>
+
+      <p class="text-gray-600 leading-relaxed">Many important peninsular rivers originate in the Western Ghats — these rivers feed agriculture, supply drinking water and carve out unique landscapes (falls, gorges).</p>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
+        <div class="bg-white rounded-2xl p-5 shadow">
+          <h4 class="font-semibold">Kaveri (Cauvery)</h4>
+          <p class="text-gray-600 text-sm mt-1">Originates in the Kodagu (Coorg) region and flows east into the Bay of Bengal.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-5 shadow">
+          <h4 class="font-semibold">Godavari</h4>
+          <p class="text-gray-600 text-sm mt-1">Major east-flowing river with headwaters in the central Ghats area.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-5 shadow">
+          <h4 class="font-semibold">Periyar</h4>
+          <p class="text-gray-600 text-sm mt-1">Important river of Kerala with Periyar wildlife and lake systems.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-5 shadow">
+          <h4 class="font-semibold">Sharavathi</h4>
+          <p class="text-gray-600 text-sm mt-1">Famous for Jog Falls; flows west toward the Arabian Sea.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-5 shadow">
+          <h4 class="font-semibold">Krishna</h4>
+          <p class="text-gray-600 text-sm mt-1">Another major eastward river sourcing from the Ghats.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-5 shadow">
+          <h4 class="font-semibold">Netravati / Tungabhadra (examples)</h4>
+          <p class="text-gray-600 text-sm mt-1">Numerous tributaries and rivers provide regional water security.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Important Peaks -->
+    <section id="peaks" class="grid md:grid-cols-2 gap-8 items-start">
+      <div>
+        <h3 class="text-xl font-semibold text-green-700">Important Peaks</h3>
+        <p class="text-gray-600 mt-2 leading-relaxed">A quick list of notable peaks — many are popular trekking destinations and form the highest points of the Ghats.</p>
+
+        <ul class="mt-4 list-disc list-inside text-gray-600 space-y-2">
+          <li><strong>Anamudi</strong> — 2,695 m (highest in Western Ghats & South India)</li>
+          <li><strong>Meesapulimala</strong> — ~2,640 m</li>
+          <li><strong>Doddabetta</strong> — ~2,637 m (Nilgiris)</li>
+          <li><strong>Mullayanagiri</strong> — ~1,930 m (Karnataka)</li>
+          <li><strong>Kalsubai</strong> — ~1,646 m (Maharashtra)</li>
+        </ul>
+      </div>
+
+      <figure class="rounded-2xl overflow-hidden shadow">
+        <img src="./assests/image/anamudi_m.jpg" alt="Anamudi peak landscape" class="w-full h-60 object-cover">
+      </figure>
+    </section>
 
 
-        <!-- footer section -->
-        <footer class="mt-16 bg-green-800 text-white py-6">
-            <div class="max-w-6xl mx-auto px-6 text-center">
-                <p class="font-medium">© 2025 Western Ghats Explorers. All Rights Reserved.</p>
-                <p class="text-sm mt-2">Made with ❤️ for nature conservation.</p>
-            </div>
-        </footer>
-    </main>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-green-800 text-white mt-12">
+    <div class="max-w-6xl mx-auto px-6 py-6 text-center text-sm">
+      © 2025 Western Ghats Explorer • Designed by Aswanth M.C
+    </div>
+  </footer>
+
+  <!-- Small accessibility improvement: add skip link -->
+  <a href="#location" class="sr-only focus:not-sr-only focus:absolute top-4 left-4 bg-white px-3 py-2 rounded text-sm">Skip to content</a>
+
 </body>
 <script>
-    // Mobile menu toggle
-    const menuToggle = document.getElementById('menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
+  // Mobile menu toggle
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
 
-    menuToggle.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-    });
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
 
-    // Close menu when a link is clicked
-    const mobileLinks = mobileMenu.querySelectorAll('a');
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            mobileMenu.classList.add('hidden');
-        });
+  // Close menu when a link is clicked
+  const mobileLinks = mobileMenu.querySelectorAll('a');
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
     });
+  });
 </script>
 
 </html>

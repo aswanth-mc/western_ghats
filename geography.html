@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -25,48 +26,53 @@
     }
   </script>
 </head>
+
 <body class="bg-gray-50 text-gray-800 antialiased">
 
-<!-- navbar -->
-    <header class="bg-gradient-to-r from-green-700 to-green-800">
-      <nav class="max-w-full py-4 px-4 flex items-center justify-between">
-        <!-- Logo -->
-        <div class="text-xl font-bold text-white">Western Ghats</div>
+  <!-- navbar -->
+  <header class="bg-gradient-to-r from-green-700 to-green-800">
+    <nav class="max-w-full py-4 px-4 flex items-center justify-between">
+      <!-- Logo -->
+      <div class="text-xl font-bold text-white">Western Ghats</div>
 
-        <!-- Hamburger Menu Button (Mobile) -->
-        <button id="menu-toggle" class="md:hidden text-white text-2xl focus:outline-none">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
+      <!-- Hamburger Menu Button (Mobile) -->
+      <button id="menu-toggle" class="md:hidden text-white text-2xl focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
 
-        <!-- Desktop Menu -->
-        <ul class="hidden md:flex space-x-8 text-sm text-white">
-          <li><a href="./index.html" class="hover:text-yellow-300 transition duration-300">Home</a></li>
-          <li><a href="#bio" class="hover:text-yellow-300 transition duration-300">Biodiversity</a></li>
-          <li><a href="/sanctury_nationalPark.html" class="hover:text-yellow-300 transition duration-300">Sanctuaries</a></li>
-          <li><a href="#challenges" class="hover:text-yellow-300 transition duration-300">Challenges</a></li>
-        </ul>
-      </nav>
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex space-x-8 text-sm text-white">
+        <li><a href="./index.html" class="hover:text-yellow-300 transition duration-300">Home</a></li>
+        <li><a href="#bio" class="hover:text-yellow-300 transition duration-300">Biodiversity</a></li>
+        <li><a href="/sanctury_nationalPark.html" class="hover:text-yellow-300 transition duration-300">Sanctuaries</a>
+        </li>
+        <li><a href="#challenges" class="hover:text-yellow-300 transition duration-300">Challenges</a></li>
+      </ul>
+    </nav>
 
-      <!-- Mobile Menu -->
-      <div id="mobile-menu" class="hidden md:hidden bg-oklch(79.2% 0.209 151.711)">
-        <ul class="flex flex-col space-y-4 px-4 py-4 text-white text-sm">
-          <li><a href="./index.html" class="block hover:text-yellow-300 transition duration-300">Home</a></li>
-          <li><a href="#bio" class="block hover:text-yellow-300 transition duration-300">Biodiversity</a></li>
-          <li><a href="./sanctury_nationalPark.html" class="block hover:text-yellow-300 transition duration-300">Sanctuaries</a></li>
-          <li><a href="#challenges" class="block hover:text-yellow-300 transition duration-300">Challenges</a></li>
-        </ul>
-      </div>
-    </header>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-oklch(79.2% 0.209 151.711)">
+      <ul class="flex flex-col space-y-4 px-4 py-4 text-white text-sm">
+        <li><a href="./index.html" class="block hover:text-yellow-300 transition duration-300">Home</a></li>
+        <li><a href="#bio" class="block hover:text-yellow-300 transition duration-300">Biodiversity</a></li>
+        <li><a href="./sanctury_nationalPark.html"
+            class="block hover:text-yellow-300 transition duration-300">Sanctuaries</a></li>
+        <li><a href="#challenges" class="block hover:text-yellow-300 transition duration-300">Challenges</a></li>
+      </ul>
+    </div>
+  </header>
 
   <!-- BANNER -->
   <section class="relative">
-    <img src="./assests/image/geography_bannar.jpg" alt="Western Ghats hills and forest" class="w-full h-64 md:h-[38vh] object-cover">
+    <img src="./assests/image/geography_bannar.jpg" alt="Western Ghats hills and forest"
+      class="w-full h-64 md:h-[38vh] object-cover">
     <div class="absolute inset-0 bg-black/35 flex items-center">
       <div class="max-w-6xl mx-auto px-6">
         <h1 class="text-3xl md:text-5xl font-extrabold text-white ">Geography of the Western Ghats</h1>
-        <p class="text-sm md:text-base text-gray-100 mt-2 max-w-2xl">Location, mountain ranges, climate, rivers and the important peaks that shape this biodiversity hotspot.</p>
+        <p class="text-sm md:text-base text-gray-100 mt-2 max-w-2xl">Location, mountain ranges, climate, rivers and the
+          important peaks that shape this biodiversity hotspot.</p>
       </div>
     </div>
   </section>
@@ -86,11 +92,15 @@
 
     <!-- Anchor navigation (compact) -->
     <section class="bg-white rounded-2xl shadow p-4 flex flex-wrap gap-3 justify-center md:justify-start">
-      <a href="#location" class="px-4 py-2 bg-green-50 text-green-700 rounded-full text-sm hover:bg-green-100">Location & Range</a>
-      <a href="#ranges" class="px-4 py-2 bg-green-50 text-green-700 rounded-full text-sm hover:bg-green-100">Major Ranges</a>
-      <a href="#climate" class="px-4 py-2 bg-green-50 text-green-700 rounded-full text-sm hover:bg-green-100">Climate</a>
+      <a href="#location" class="px-4 py-2 bg-green-50 text-green-700 rounded-full text-sm hover:bg-green-100">Location
+        & Range</a>
+      <a href="#ranges" class="px-4 py-2 bg-green-50 text-green-700 rounded-full text-sm hover:bg-green-100">Major
+        Ranges</a>
+      <a href="#climate"
+        class="px-4 py-2 bg-green-50 text-green-700 rounded-full text-sm hover:bg-green-100">Climate</a>
       <a href="#rivers" class="px-4 py-2 bg-green-50 text-green-700 rounded-full text-sm hover:bg-green-100">Rivers</a>
-      <a href="#peaks" class="px-4 py-2 bg-green-50 text-green-700 rounded-full text-sm hover:bg-green-100">Important Peaks</a>
+      <a href="#peaks" class="px-4 py-2 bg-green-50 text-green-700 rounded-full text-sm hover:bg-green-100">Important
+        Peaks</a>
     </section>
 
     <!-- 1. Location & Range -->
@@ -123,22 +133,26 @@
         <!-- card -->
         <article class="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition">
           <h4 class="font-semibold">Sahyadri Range (Maharashtra)</h4>
-          <p class="text-gray-600 mt-2">Covers the northern stretch; includes hill stations like Mahabaleshwar and the Kalsubai peak.</p>
+          <p class="text-gray-600 mt-2">Covers the northern stretch; includes hill stations like Mahabaleshwar and the
+            Kalsubai peak.</p>
         </article>
 
         <article class="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition">
           <h4 class="font-semibold">Nilgiri Hills</h4>
-          <p class="text-gray-600 mt-2">Bordering Tamil Nadu, Kerala and Karnataka — famous for Ooty and montane ecosystems.</p>
+          <p class="text-gray-600 mt-2">Bordering Tamil Nadu, Kerala and Karnataka — famous for Ooty and montane
+            ecosystems.</p>
         </article>
 
         <article class="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition">
           <h4 class="font-semibold">Anaimalai (Anamala)</h4>
-          <p class="text-gray-600 mt-2">Includes high peaks like Anamudi and large protected areas (Parambikulam, Anamalai).</p>
+          <p class="text-gray-600 mt-2">Includes high peaks like Anamudi and large protected areas (Parambikulam,
+            Anamalai).</p>
         </article>
 
         <article class="bg-white rounded-2xl shadow p-5 hover:shadow-lg transition">
           <h4 class="font-semibold">Cardamom & Agasthyamalai Hills</h4>
-          <p class="text-gray-600 mt-2">Southern ranges known for spices, medicinal plants, and unique flora/fauna (Agasthyamala).</p>
+          <p class="text-gray-600 mt-2">Southern ranges known for spices, medicinal plants, and unique flora/fauna
+            (Agasthyamala).</p>
         </article>
       </div>
     </section>
@@ -156,12 +170,14 @@
         <ul class="mt-3 text-gray-600 list-disc list-inside">
           <li><strong>High rainfall:</strong> some places exceed 5,000–7,000 mm/year.</li>
           <li><strong>Seasons:</strong> Southwest monsoon, northeast monsoon, and dry season.</li>
-          <li><strong>Altitude effect:</strong> Higher elevations are cooler with montane shola-grassland ecosystems.</li>
+          <li><strong>Altitude effect:</strong> Higher elevations are cooler with montane shola-grassland ecosystems.
+          </li>
         </ul>
       </div>
 
       <figure class="rounded-2xl overflow-hidden shadow">
-        <img src="./assests/image/misty western ghats .jpg" alt="Misty Western Ghats during monsoon" class="w-full h-56 object-cover">
+        <img src="./assests/image/misty western ghats .jpg" alt="Misty Western Ghats during monsoon"
+          class="w-full h-56 object-cover">
       </figure>
     </section>
 
@@ -169,12 +185,14 @@
     <section id="rivers" class="space-y-6">
       <h3 class="text-xl font-semibold text-green-700">Major Rivers</h3>
 
-      <p class="text-gray-600 leading-relaxed">Many important peninsular rivers originate in the Western Ghats — these rivers feed agriculture, supply drinking water and carve out unique landscapes (falls, gorges).</p>
+      <p class="text-gray-600 leading-relaxed">Many important peninsular rivers originate in the Western Ghats — these
+        rivers feed agriculture, supply drinking water and carve out unique landscapes (falls, gorges).</p>
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
         <div class="bg-white rounded-2xl p-5 shadow">
           <h4 class="font-semibold">Kaveri (Cauvery)</h4>
-          <p class="text-gray-600 text-sm mt-1">Originates in the Kodagu (Coorg) region and flows east into the Bay of Bengal.</p>
+          <p class="text-gray-600 text-sm mt-1">Originates in the Kodagu (Coorg) region and flows east into the Bay of
+            Bengal.</p>
         </div>
 
         <div class="bg-white rounded-2xl p-5 shadow">
@@ -208,7 +226,8 @@
     <section id="peaks" class="grid md:grid-cols-2 gap-8 items-start">
       <div>
         <h3 class="text-xl font-semibold text-green-700">Important Peaks</h3>
-        <p class="text-gray-600 mt-2 leading-relaxed">A quick list of notable peaks — many are popular trekking destinations and form the highest points of the Ghats.</p>
+        <p class="text-gray-600 mt-2 leading-relaxed">A quick list of notable peaks — many are popular trekking
+          destinations and form the highest points of the Ghats.</p>
 
         <ul class="mt-4 list-disc list-inside text-gray-600 space-y-2">
           <li><strong>Anamudi</strong> — 2,695 m (highest in Western Ghats & South India)</li>
@@ -235,7 +254,8 @@
   </footer>
 
   <!-- Small accessibility improvement: add skip link -->
-  <a href="#location" class="sr-only focus:not-sr-only focus:absolute top-4 left-4 bg-white px-3 py-2 rounded text-sm">Skip to content</a>
+  <a href="#location"
+    class="sr-only focus:not-sr-only focus:absolute top-4 left-4 bg-white px-3 py-2 rounded text-sm">Skip to content</a>
 
 </body>
 <script>

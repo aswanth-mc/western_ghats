@@ -1,0 +1,6 @@
+.hero-section {
+  height: 100vh;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url("assests/image/western_ghats_bannar.jpg") ;
+}

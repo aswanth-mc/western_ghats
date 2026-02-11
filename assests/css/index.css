@@ -8,3 +8,24 @@
 .navbar {
   background-color: #005F02;
 }
+
+.intro-western{
+  background-color: #0d6714;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+intro-content{
+  flex: 1;
+  color: #fff;
+ 
+}
+.intro-image{
+  flex: 0 0 40%;
+}
+
+.intro-image img{
+  max-width: 100%;
+  height: auto;
+}

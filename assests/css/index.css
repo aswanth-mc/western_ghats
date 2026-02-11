@@ -2,5 +2,9 @@
   height: 100vh;
   background: 
     linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-    url("assests/image/western_ghats_bannar.jpg") ;
+    url("/assests/image/western_ghats_bannar.jpg") no-repeat center center/cover; ;
+}
+
+.navbar {
+  background-color: #005F02;
 }

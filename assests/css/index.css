@@ -14,18 +14,41 @@
   display: flex;
   align-items: center;
   gap: 20px;
+  padding: 40px;
 }
 
-intro-content{
+.intro-section {
+  background-color: #f8f9fa; 
+}
+
+.intro-content{
   flex: 1;
   color: #fff;
  
 }
+
+.intro-section h2 {
+  color: #1b5e20;
+}
+
+.intro-section p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
 .intro-image{
   flex: 0 0 40%;
 }
 
-.intro-image img{
-  max-width: 100%;
-  height: auto;
+.intro-section img {
+  max-height: 700px;
+  width: 100%;
+  object-fit: cover;
+
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.intro-section img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
 }

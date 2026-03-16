@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Western Ghats{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<header>
+    <h1>Western Ghats Biodiversity</h1>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/parks/">National Parks</a>
+        <a href="/sanctuaries/">Sanctuaries</a>
+        <a href="/species/">Species</a>
+        <a href="/articles/">Articles</a>
+    </nav>
+</header>
+
+<main>
+{% block content %}
+{% endblock %}
+</main>
+
+<footer>
+    <p>Western Ghats Biodiversity Portal</p>
+</footer>
+
+</body>
+</html>

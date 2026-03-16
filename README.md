@@ -61,10 +61,10 @@ Example protected areas included in the platform:
 ```
 western-ghats/
 │
-├── backend/           # Django project configuration
-├── core/              # Core app (homepage and common views)
-├── templates/         # HTML templates
-├── static/            # CSS, JS, images
+├── western-ghats-/           # Django project configuration
+├── core/                     # Core app (homepage and common views)
+├── templates/                # HTML templates
+├── static/                   # CSS, JS, images
 │
 ├── manage.py
 ├── requirements.txt

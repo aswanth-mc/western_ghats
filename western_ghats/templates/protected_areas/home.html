@@ -1,0 +1,127 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Protected Areas - Western Ghats Portal{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<div class="bg-dark text-light py-4 mb-4 shadow-sm">
+    <div class="container">
+        <h1 class="fw-bold mb-1"><i class="fa-solid fa-tree me-2 text-success"></i>Protected Areas of Western Ghats</h1>
+        <p class="text-muted mb-0">Explore National Parks, Wildlife Sanctuaries, and Tiger Reserves across the Ghats.</p>
+    </div>
+</div>
+
+<div class="container my-4">
+    <div class="row g-4">
+
+        <!-- Sidebar Filter Card -->
+        <div class="col-lg-3">
+            <div class="card border-0 shadow-sm sticky-top" style="top: 20px; z-index: 100;">
+                <div class="card-body">
+                    <h5 class="fw-bold text-success mb-3">
+                        <i class="fa-solid fa-filter me-2"></i>Filter Areas
+                    </h5>
+
+                    <form method="get" action="">
+                        <!-- Filter by Category -->
+                        <div class="mb-3">
+                            <label for="category" class="form-label fw-semibold small text-muted">Category</label>
+                            <select name="category" id="category" class="form-select">
+                                <option value="">All Categories</option>
+                                {% for code, label in categories %}
+                                    <option value="{{ code }}" {% if selected_category == code %}selected{% endif %}>
+                                        {{ label }}
+                                    </option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <!-- Filter by State -->
+                        <div class="mb-3">
+                            <label for="state" class="form-label fw-semibold small text-muted">State</label>
+                            <select name="state" id="state" class="form-select">
+                                <option value="">All States</option>
+                                {% for st in states %}
+                                    <option value="{{ st }}" {% if selected_state == st %}selected{% endif %}>
+                                        {{ st }}
+                                    </option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-success fw-semibold">Apply Filters</button>
+                            {% if selected_category or selected_state %}
+                                <a href="{% url 'protected_area_list' %}" class="btn btn-outline-secondary btn-sm">Clear Filters</a>
+                            {% endif %}
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Card Grid -->
+        <div class="col-lg-9">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <p class="text-muted mb-0">Showing <strong>{{ protected_areas|length }}</strong> protected area(s)</p>
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
+                {% for area in protected_areas %}
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm hover-shadow transition">
+                        <!-- Header Badge -->
+                        <div class="card-header bg-transparent border-0 pt-3 px-3 pb-0 d-flex justify-content-between align-items-center">
+                            <span class="badge {% if area.category == 'NP' %}bg-success{% elif area.category == 'TR' %}bg-danger{% else %}bg-primary{% endif %}">
+                                {{ area.get_category_display }}
+                            </span>
+                            <small class="text-muted"><i class="fa-solid fa-location-dot me-1"></i>{{ area.state }}</small>
+                        </div>
+
+                        <!-- Body Content -->
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold text-dark mb-2">{{ area.name }}</h5>
+                            <p class="card-text text-muted small mb-3">
+                                📍 <strong>District:</strong> {{ area.district }}
+                            </p>
+                            
+                            <ul class="list-unstyled small text-secondary mb-0">
+                                {% if area.established_year %}
+                                <li class="mb-1">📅 <strong>Established:</strong> {{ area.established_year }}</li>
+                                {% endif %}
+                                {% if area.area_sq_km %}
+                                <li class="mb-1">📏 <strong>Area:</strong> {{ area.area_sq_km }} sq km</li>
+                                {% endif %}
+                            </ul>
+                        </div>
+
+                        <!-- Footer Actions -->
+                        <div class="card-footer bg-light border-0 d-flex justify-content-between align-items-center">
+                            <a href="{% url 'protected_area_detail' area.id %}" class="btn btn-sm btn-outline-success">
+                                View Details <i class="fa-solid fa-arrow-right ms-1"></i>
+                            </a>
+                            {% if area.official_website %}
+                                <a href="{{ area.official_website }}" target="_blank" class="text-secondary small text-decoration-none" title="Official Website">
+                                    <i class="fa-solid fa-globe"></i>
+                                </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                {% empty %}
+                <div class="col-12 text-center py-5">
+                    <div class="text-muted">
+                        <i class="fa-solid fa-tree-city fs-1 mb-3"></i>
+                        <h5>No protected areas found matching your filters.</h5>
+                        <p class="small">Try resetting your filter selection or check back later.</p>
+                        <a href="{% url 'protected_area_list' %}" class="btn btn-success btn-sm mt-2">Reset Filters</a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}
